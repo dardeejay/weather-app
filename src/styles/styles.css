@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  color: white;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 100%;
+  height: 100svh;
+}
+
+.input,
+.weather-card {
+  width: 40%;
+}
+.weather-card {
+  aspect-ratio: 1.5/1;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(70, 130, 216, 1) 0%,
+    rgba(153, 192, 247, 1) 100%
+  );
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3%;
+  align-items: start;
+  width: 50%;
+  height: 100%;
+}
+
+.weather-details > * {
+  padding: 4%;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
