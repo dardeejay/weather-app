@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 3%;
-  align-items: start;
+  align-items: flex-start;
   width: 50%;
   height: 100%;
 }
