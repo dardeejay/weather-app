@@ -1,4 +1,4 @@
-const {useEffect, useState} = require("react");
+import { useState, useEffect } from 'react';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -28,5 +28,4 @@ const useFetch = (location) => {
 
     return { data, loading, error };
 }
-
-module.exports = useFetch;
+export default useFetch;

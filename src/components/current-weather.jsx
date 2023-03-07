@@ -1,6 +1,5 @@
 import React from "react";
-
-const useFetch = require("../hooks/useFetch");
+import useFetch from "../hooks/useFetch";
 
 function toTitleCase(str) {
   return str.replace(/\b\w+/g, function (txt) {
@@ -34,7 +33,7 @@ export default function CurrentWeather({ location }) {
       </div>
     );
   }
-  console.log(data);
+
   const icon = data.weather[0].icon;
 
   return (
