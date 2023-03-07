@@ -1,16 +1,25 @@
 import React, { useRef, useState } from "react";
-
-export default function Search() {
-  const [location, setLocation] = useState(null);
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+export default function Search({ setLocation }) {
   const search = useRef();
-  const handleOnClick = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setLocation(search.current.value);
   };
-  console.log(location);
+
   return (
-    <div>
-      <input type="text" name="location" id="location" ref={search} />
-      <button onClick={handleOnClick}>Search</button>
+    <div className="search-container">
+      <input
+        type="text"
+        name="location"
+        id="location"
+        ref={search}
+        placeholder="Location ex. Olongapo City"
+      />
+      <button onClick={handleSubmit}>
+        <FontAwesomeIcon icon={faMagnifyingGlass} id="search-icon" />
+      </button>
     </div>
   );
 }

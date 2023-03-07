@@ -26,7 +26,7 @@ const useFetch = (location) => {
        }
 
        fetchData();
-    }, []);
+    }, [location]);
 
     return { data, loading, error };
 }
